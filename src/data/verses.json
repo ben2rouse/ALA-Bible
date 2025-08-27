@@ -1,20 +1,13 @@
 [
-  {
-    "id": "john-3-16",
-    "reference": "John 3:16",
-    "title": "For God so loved the world",
-    "versions": {
-      "KJV": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
-      "NIV": "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life."
+    {
+        "id": "1-john-4-8",
+        "reference": "1 John 4:8",
+        "title": "God is love",
+        "versions": {
+            "NKJV": "He who does not love does not know God, for God is love.",
+            "KJV": "He that loveth not knoweth not God; for God is love.",
+            "NIV": "Whoever does not love does not know God, because God is love.",
+            "ESV": "Anyone who does not love does not know God, because God is love."
+        }
     }
-  },
-  {
-    "id": "phil-4-13",
-    "reference": "Philippians 4:13",
-    "title": "I can do all things",
-    "versions": {
-      "KJV": "I can do all things through Christ which strengtheneth me.",
-      "NIV": "I can do all this through him who gives me strength."
-    }
-  }
 ]
