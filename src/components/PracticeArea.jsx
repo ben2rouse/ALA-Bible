@@ -67,16 +67,9 @@ export default function PracticeArea({verseText, reference, difficulty}){
 
   function handleSubmit(idx){
     if(results[idx]!==undefined) return
-    let ok
-    if(difficulty === 6){
-      const correctRaw = tokens[idx]
-      const givenRaw = (inputs[idx]||'').trim()
-      ok = (givenRaw === correctRaw)
-    } else {
-      const correctNorm = normalizeWord(tokens[idx])
-      const givenNorm = normalizeWord(inputs[idx] || '')
-      ok = (givenNorm === correctNorm)
-    }
+    const correctNorm = normalizeWord(tokens[idx])
+    const givenNorm = normalizeWord(inputs[idx] || '')
+    const ok = (givenNorm === correctNorm)
     const correct = tokens[idx]
     setResults(prev=> ({...prev, [idx]: {ok, correct}}))
   }
@@ -152,7 +145,7 @@ export default function PracticeArea({verseText, reference, difficulty}){
       <div className="legend">
         <span className="legend-item ok">Correct</span>
         <span className="legend-item bad">Incorrect (answer shown)</span>
-        {difficulty===6 && <span className="legend-item">Exact match incl. punctuation</span>}
+  {difficulty===6 && <span className="legend-item">Level 6: All words hidden (punctuation ignored)</span>}
       </div>
 
     </section>
