@@ -29,11 +29,13 @@ export default function VerseSelector({verses, selectedId, onSelect, versionKey,
         <input
           type="range"
           min="1"
-          max="5"
+          max="6"
           value={difficulty}
           onChange={e=>onDifficultyChange(Number(e.target.value))}
         />
-        <span className="difficulty-label">Level {difficulty}</span>
+        <span className="difficulty-label">
+          {difficulty < 6 ? `Level ${difficulty}` : 'Level 6: All words hidden (exact incl. punctuation)'}
+        </span>
       </div>
     </section>
   )
