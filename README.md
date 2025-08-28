@@ -23,3 +23,5 @@ Notes
 
 - Add or edit verses in `src/data/verses.json`. Each verse has an `id`, `reference`, and `versions` map.
 - This intentionally has no authentication or progress tracking.
+
+Deployment note: This line exists solely as a trivial change to trigger a new GitHub Pages deploy.
