@@ -25,3 +25,14 @@ Notes
 - This intentionally has no authentication or progress tracking.
 
 Deployment note: This line exists solely as a trivial change to trigger a new GitHub Pages deploy.
+
+## Working Style (Direct-to-Main for Prototype)
+
+This project is in an experimental phase, so changes are committed straight to `main` instead of using feature branches / pull requests. That's fine for a solo prototype. If it breaks, just commit another fix.
+
+Quick rules adopted:
+- Commit only source (no `dist/`). CI/Actions builds and deploys.
+- Small, frequent commits with clear messages.
+- If a bad commit ships, push a follow-up fix (no need to revert unless desired).
+
+Later (if this grows or others join) you can switch to branches + PRs without rewriting history.
