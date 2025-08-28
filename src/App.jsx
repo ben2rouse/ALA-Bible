@@ -40,10 +40,6 @@ export default function App(){
           difficulty={difficulty}
         />
       </main>
-
-      <footer className="footer">
-        <small>No accounts. No tracking. Single-page practice.</small>
-      </footer>
     </div>
   )
 }
