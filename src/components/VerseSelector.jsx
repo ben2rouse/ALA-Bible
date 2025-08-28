@@ -24,18 +24,20 @@ export default function VerseSelector({verses, selectedId, onSelect, versionKey,
         </select>
       </div>
 
-      <div className="row range-row">
-        <label>Difficulty</label>
-        <input
-          type="range"
-          min="1"
-          max="6"
-          value={difficulty}
-          onChange={e=>onDifficultyChange(Number(e.target.value))}
-        />
-        <span className="difficulty-label">
-          {difficulty < 6 ? `Level ${difficulty}` : 'Level 6: All words hidden (exact incl. punctuation)'}
-        </span>
+      <div className="row level-row">
+        <label>Level</label>
+        <div className="levels">
+          {[1,2,3,4,5,6].map(l => (
+            <button
+              key={l}
+              type="button"
+              className={"level-btn" + (difficulty===l ? ' active':'')}
+              onClick={()=> onDifficultyChange(l)}
+              aria-pressed={difficulty===l}
+            >{l}</button>
+          ))}
+        </div>
+        <span className="difficulty-label">{difficulty===6? 'All hidden (punctuation too)' : `Level ${difficulty}`}</span>
       </div>
     </section>
   )

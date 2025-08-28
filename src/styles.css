@@ -20,7 +20,11 @@ body{margin:0;background:var(--bg);color:#0f172a}
 .selector .row{display:flex;flex-direction:column;min-width:180px}
 .selector label{font-size:12px;color:var(--muted);margin-bottom:6px}
 .selector select, .selector input[type='range']{padding:8px;border-radius:8px;border:1px solid #e6eef8;background:#fff}
-.range-row{align-items:center}
+.level-row{align-items:center}
+.levels{display:flex;gap:4px;flex-wrap:wrap}
+.level-btn{cursor:pointer;background:#fff;border:1px solid #cbd5e1;border-radius:6px;padding:6px 10px;font-size:12px;line-height:1;font-weight:500;color:#334155;transition:background .15s,border-color .15s, color .15s}
+.level-btn:hover{background:#eff6ff;border-color:#93c5fd}
+.level-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 0 0 1px rgba(0,0,0,0.04)}
 .difficulty-label{font-size:12px;color:var(--muted);margin-left:8px}
 .practice{background:var(--card);padding:18px;border-radius:var(--radius)}
 .practice-controls{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
